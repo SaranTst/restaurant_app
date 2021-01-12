@@ -1,0 +1,47 @@
+.map-center {
+    display: flex;
+    justify-content: center;
+}
+#map {
+    width:100%;
+    height:450px;
+}
+
+#results {
+    position: absolute;
+    width: 95%;
+    height: 75%;
+    overflow: auto;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+.placeIcon {
+    width: 20px;
+    height: 34px;
+    margin: 4px;
+    margin-right: 20px;
+}
+
+.hotelIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#rating {
+    font-size: 13px;
+    font-family: Arial Unicode MS;
+}
+
+.iw_table_row {
+    height: 18px;
+}
+
+.iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+}
+
+.iw_table_icon {
+    text-align: right;
+}
