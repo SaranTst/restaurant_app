@@ -2,26 +2,14 @@ let map;
 let places;
 let infoWindow;
 let markers = [];
-let autocomplete;
 const MARKER_PATH = "http://maps.google.com/mapfiles/marker.png";
 const hostnameRegexp = new RegExp("^https?://.+?/");
-
-$( document ).ready(function() {
-
-    setTimeout(function(){
-
-        // set default marker Bang Sue
-        var LatlngBangSue = new google.maps.LatLng(13.828253, 100.5284507);
-        map.panTo(LatlngBangSue);
-        map.setZoom(14);
-    }, 200);
-});
 
 function initMap() {
 
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
-        center: {lat: 13.8126759, lng: 100.5256721},
+        center: {lat: 13.828253, lng: 100.5284507},
         mapTypeControl: false,
         panControl: false,
         zoomControl: false,
@@ -33,27 +21,6 @@ function initMap() {
     });
 
     places = new google.maps.places.PlacesService(map);
-}
-
-// When the user selects a city, get the place details for the city and
-// zoom the map in on the city.
-function onPlaceChanged() {
-    const place = autocomplete.getPlace();
-
-    let dataSearch = {
-        'name': place.name,
-        'lat': place.geometry.location.lat,
-        'lng': place.geometry.location.lng
-    }
-    saveSearch(dataSearch)
-
-    if (place.geometry) {
-        map.panTo(place.geometry.location);
-        map.setZoom(14);
-        search();
-    } else {
-        document.getElementById("autocomplete").placeholder = "Enter a Restaurant";
-    }
 }
 
 function clearMarkers() {
