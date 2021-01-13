@@ -10,6 +10,6 @@
 
 ### Api
 
-- {{url}}/api/restaurant/searchRestaurants -> search restaurant
-- {{url}}/api/restaurant/getCache -> get data cache
-- {{url}}/api/api/restaurant/getCsrf -> get X-CSRF-TOKEN
+- {{url}} /api/restaurant/searchRestaurants -> search restaurant
+- {{url}} /api/restaurant/getCache -> get data cache
+- {{url}} /api/restaurant/getCsrf -> get X-CSRF-TOKEN
